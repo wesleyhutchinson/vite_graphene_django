@@ -9,10 +9,10 @@ from .api.views import index_view
 urlpatterns = [
     path('api/admin/', admin.site.urls),
     path("", index_view, name="index"),
-    path("api/", GraphQLView.as_view())
+    # path("api/", GraphQLView.as_view())
 ]
 
-# if settings.DEBUG:
-#     urlpatterns += (path("api/", GraphQLView.as_view(graphiql=True)),)
-# else:
-#     urlpatterns += (path("api/", GraphQLView.as_view()),)
+if settings.DEBUG:
+    urlpatterns += (path("api/", GraphQLView.as_view(graphiql=True)),)
+else:
+    urlpatterns += (path("api/", GraphQLView.as_view()),)
