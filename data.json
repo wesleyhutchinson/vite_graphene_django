@@ -1,0 +1,26 @@
+[
+  {
+    "model": "events.category", 
+    "pk": 1, 
+    "fields": {
+      "name": "Awesome"
+      }
+  }, 
+  {
+    "model": "events.category", 
+    "pk": 2, 
+    "fields": {
+      "name": "Super Awesome"
+      }
+  }, 
+  {
+    "model": "events.event", 
+    "pk": 1, 
+    "fields": {
+      "name": "Super Event", 
+      "notes": "An event for super people", 
+      "datetime": "2022-04-06T11:00:00Z", 
+      "category": 2
+      }
+  }
+]
